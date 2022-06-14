@@ -39,7 +39,7 @@ class Email{
 
         $contenido = "<hml>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenten App Salon, solo debes confirmarlo presionadno el siguiente enlace</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token ."'>Validar Cuenta</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='https://tranquil-journey-18849.herokuapp.com/confirmar-cuenta?token=" . $this->token ."'>Validar Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, ignora el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
@@ -67,7 +67,7 @@ class Email{
 
         $contenido = "<hml>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has solicitado reestablecer tu password, sigue el siguiente enlace para hacerlo</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/recuperar?token=" . $this->token ."'>Reestablecer Password</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='https://tranquil-journey-18849.herokuapp.com/recuperar?token=" . $this->token ."'>Reestablecer Password</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, ignora el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
