@@ -23,14 +23,13 @@ class Email{
         //Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '05816bfb40ab4b';
-        $mail->Password = '8df7e31bc2f0ce';
+        $mail->Username = $_ENV['EMAIL'];
+        $mail->Password = $_ENV['PASS'];
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'Appsalon.com');
+        $mail->setFrom($_ENV['EMAIL'], 'AppSalon');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu cuenta';
 
         //Set HTML
@@ -51,14 +50,13 @@ class Email{
         //Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '05816bfb40ab4b';
-        $mail->Password = '8df7e31bc2f0ce';
+        $mail->Username = $_ENV['EMAIL'];
+        $mail->Password = $_ENV['PASS'];
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'Appsalon.com');
+        $mail->setFrom($_ENV['EMAIL'], 'AppSalon');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Reestablece tu password';
 
         //Set HTML
